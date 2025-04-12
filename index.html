@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌾 Smart Crop Health Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌿 Smart Crop Health Monitor</h1>
+    <p>Upload a crop image and detect potential diseases using AI.</p>
+  </header>
+
+  <main>
+    <h2>📤 Upload Image</h2>
+    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage()">
+    <img id="imagePreview" src="" alt="Image Preview" style="display:none;">
+
+    <div>
+      <button class="btn" onclick="uploadImage()">Upload</button>
+      <button class="btn" onclick="getResults()">Get Analysis</button>
+    </div>
+
+    <div id="status"></div>
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    &copy; 2025 SmartAgriAI. All rights reserved.
+  </footer>
+
+  <img id="supportIcon" src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Support" onclick="openLexChat()">
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+  <script src="https://crop-bot-web-ui.s3.amazonaws.com/lex-web-ui-loader.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
